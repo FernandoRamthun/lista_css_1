@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibição de Elementos HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cenário a) Elementos de bloco -->
+    <section class="cenario">
+        <h2>a) Elementos de Bloco</h2>
+        <div class="exemplo">
+            <div>Div 1</div>
+            <div>Div 2</div>
+            <p>Parágrafo</p>
+        </div>
+        <div class="explicacao">
+            <strong>Por que exibe assim?</strong>
+            <ul>
+                <li>Divs e parágrafos são elementos de bloco.</li>
+                <li>Ocupam toda a largura do container.</li>
+                <li>Quebram linha automaticamente.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cenário b) Elementos inline -->
+    <section class="cenario">
+        <h2>b) Elementos Inline</h2>
+        <div class="exemplo">
+            <span>Span 1</span>
+            <span>Span 2</span>
+            <a href="#">Link</a>
+        </div>
+        <div class="explicacao">
+            <strong>Por que exibe assim?</strong>
+            <ul>
+                <li>Spans e links são elementos inline.</li>
+                <li>Ocupam apenas o espaço do conteúdo.</li>
+                <li>Ficam na mesma linha, se couberem.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cenário c) Layout Flexbox -->
+    <section class="cenario">
+        <h2>c) Layout Flexbox</h2>
+        <div class="exemplo-flex">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+        <div class="explicacao">
+            <strong>Por que exibe assim?</strong>
+            <ul>
+                <li>O container usa <code>display: flex</code>.</li>
+                <li>Itens se alinham horizontalmente por padrão.</li>
+                <li>O espaçamento é controlado por <code>gap</code>.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <a href="lista-css-1.html">Voltar para a lista de exercícios</a>
+</body>
+</html>
