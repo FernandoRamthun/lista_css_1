@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo Regras CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>  <h1>Entendendo Regras CSS</h1>
-    
-    <div class="destaque">
-        <p>Uma regra CSS é como uma receita que diz ao navegador:<br>
-        1. <strong>O que</strong> estilizar (seletor)<br>
-        2. <strong>Como</strong> estilizar (propriedade + valor)</p>
-    </div>
+<body>
 
+    <h1>O que é uma Regra CSS?</h1>
 
-    <p style="margin-top: 20px; padding: 10px; border: 2px dashed #3498db;">
-        Este parágrafo tem um estilo inline (margin, padding e borda) para mostrar a diferença! 🌟
-    </p>
+    <p>Uma <strong>regra CSS</strong> é um conjunto de instruções que informam ao navegador como os elementos HTML de uma página devem ser exibidos. A regra CSS altera características como cores, fontes, tamanhos e posicionamento de elementos na página.</p>
 
-    <div class="explicacao">
-        <h2>Funcionamento do Código Acima:</h2>
-        <pre>
-&lt;style&gt;
-    h1 {
-        color: #2c3e50;      /* Cor do título */
-        text-align: center; /* Centralização */
-    }
+    <h2>Estrutura de uma Regra CSS</h2>
+    <p>Uma regra CSS é composta por duas partes principais:</p>
+    <ul>
+        <li><strong>Seletor:</strong> Define o ou os elementos HTML aos quais a regra se aplica. Pode ser uma tag HTML, uma classe, um ID ou uma combinação deles.</li>
+        <li><strong>Declaração:</strong> Define o que será estilizado. A declaração é composta por uma ou mais propriedades e valores.</li>
+    </ul>
 
-    .destaque {             /* Classe aplicada à div */
-        background-color: #f9e79f;
-        padding: 15px;
-        border-radius: 8px;
-    }
-&lt;/style&gt;
-        </pre>
-    </div>
+    <p>O formato básico de uma regra CSS é:</p>
+    <pre>
+        seletor {
+            propriedade: valor;
+        }
+    </pre>
 
-    <a href="https://fernandoramthun.github.io/lista_css_1/">Voltar para a lista de exercícios</a>
+    <h2>Exemplo Prático de Regra CSS</h2>
+
+    <p>Aqui está um exemplo de uma regra CSS que altera a aparência de um título <code>h1</code>:</p>
+    <pre>
+        h1 {
+            color: #2c3e50;  /* Cor do texto */
+            text-align: center; /* Alinha o texto ao centro */
+            font-family: Arial, sans-serif; /* Define a fonte */
+        }
+    </pre>
+    <p>Este código fará com que todos os títulos <code>h1</code> da página tenham a cor <strong>azul escuro</strong>, sejam <strong>centralizados</strong> e usem a fonte <strong>Arial</strong>.</p>
+
+    <h2>Exemplo de Funcionamento</h2>
+    <p>Para testar a regra, você pode criar um arquivo CSS externo e aplicá-lo ao seu HTML. O exemplo abaixo mostra um código HTML com um arquivo CSS externo.</p>
+
+    <h3>HTML (`index.html`)</h3>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-br"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Exemplo de Regras CSS&lt;/title&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Exemplo de Título com CSS&lt;/h1&gt;
+            &lt;p&gt;Este é um parágrafo com a formatação aplicada através de CSS externo.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <h3>CSS (`style.css`)</h3>
+    <pre>
+        h1 {
+            color: darkblue;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+    </pre>
+
+    <p>Com esses arquivos, você verá que o título ficará em <strong>azul escuro</strong> e o parágrafo terá um tamanho de fonte de <strong>16px</strong> e cor <strong>#333</strong>.</p>
+
+    <h2>Importância da Cascata (Cascading)</h2>
+    <p>A palavra "Cascading" no CSS refere-se à maneira como os estilos são aplicados e resolvem conflitos. Se várias regras forem aplicadas a um mesmo elemento, o navegador vai seguir a ordem de prioridade das regras, com base na especificidade e na ordem do código.</p>
+
+    <h2>Outros Tipos de CSS</h2>
+    <p>O CSS pode ser aplicado de diferentes maneiras:</p>
+    <ul>
+        <li><strong>Inline:</strong> A regra é aplicada diretamente em um elemento HTML usando o atributo <code>style</code>.</li>
+        <li><strong>Interno:</strong> A regra é escrita dentro da tag <code>&lt;style&gt;</code> no cabeçalho do documento HTML.</li>
+        <li><strong>Externo:</strong> A regra é colocada em um arquivo CSS separado e vinculada ao HTML usando a tag <code>&lt;link&gt;</code>.</li>
+    </ul>
+
+    <h2>Referências Bibliográficas</h2>
+    <ul>
+        <li>W3C. CSS - Cascading Style Sheets. 2025. Disponível em: <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">https://www.w3.org/Style/CSS/Overview.en.html</a></li>
+        <li>W3schools - Sintaxe CSS. 2025. Disponível em: <a href="https://www.w3schools.com/Css/css_syntax.asp" target="_blank">https://www.w3schools.com/Css/css_syntax.asp</a></li>
+    </ul>
+
+    <p><a href="https://fernandoramthun.github.io/lista_css_1/">Voltar para a lista de exercícios</a></p>
+
 </body>
 </html>

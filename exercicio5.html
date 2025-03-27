@@ -1,66 +1,199 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Exibição de Elementos HTML</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Layout Unificados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #686969;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout Principal */
+        .exercicio {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: space-between; /* Garantir que as caixas ocupem toda a tela */
+        }
+
+        /* Exercício A - Colunas Verticais */
+        #exercicioA {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #exercicioA .caixa {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        #exercicioA div:nth-child(1) { background: #0000ff }
+        #exercicioA div:nth-child(2) { background: #008000 }
+        #exercicioA div:nth-child(3) { background: #ff0000 }
+        #exercicioA div:nth-child(4) { background: #ffff00 }
+
+        /* Exercício B - Linha Horizontal */
+        #exercicioB {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        #exercicioB .caixa {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        #exercicioB div:nth-child(1) { background: #0000ff }
+        #exercicioB div:nth-child(2) { background: #008000 }
+        #exercicioB div:nth-child(3) { background: #ff0000 }
+        #exercicioB div:nth-child(4) { background: #ffff00 }
+
+        /* Exercício C - Posicionamento Complexo */
+        #exercicioC { 
+            background: #686969; 
+            position: relative;
+            display: flex;
+            flex: 1;
+        }
+
+        #exercicioC .caixa {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        #exercicioC div:nth-child(1) { background: #ff0000; top: 0; left: 0 }
+        #exercicioC div:nth-child(2) { background: #ffff00; top: 0; right: 0 }
+        #exercicioC div:nth-child(3) { background: #008000; bottom: 0; right: 0 }
+        #exercicioC div:nth-child(4) { background: #0000ff; bottom: 0; left: 0 }
+        
+        /* Ajuste para o item 5 - Centralização correta */
+        #exercicioC div:nth-child(5) { 
+            background: #8a2be2;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Explicações */
+        .explicacao-item {
+            padding: 15px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            margin-top: 20px;
+            flex-shrink: 0; /* Garante que as explicações não se movam dentro da área flexível */
+        }
+
+        .explicacao-item h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .explicacao-item ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .explicacao-item ul li {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <!-- Cenário a) Elementos de bloco -->
-    <section class="cenario">
-        <h2>a) Elementos de Bloco</h2>
-        <div class="exemplo">
-            <div>Div 1</div>
-            <div>Div 2</div>
-            <p>Parágrafo</p>
-        </div>
-        <div class="explicacao">
-            <strong>Por que exibe assim?</strong>
-            <ul>
-                <li>Divs e parágrafos são elementos de bloco.</li>
-                <li>Ocupam toda a largura do container.</li>
-                <li>Quebram linha automaticamente.</li>
-            </ul>
-        </div>
+    <!-- Exercício A -->
+    <section class="exercicio" id="exercicioA">
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+        <div class="caixa">4</div>
     </section>
+    <div class="explicacao-item">
+        <h3>Explicação do Exercício A</h3>
+        <ul>
+            <li>• Este layout vertical utiliza as seguintes propriedades CSS:</li>
+            <li>• <code>display: flex</code> no container principal para criar um layout flexível</li>
+            <li>• <code>flex-direction: column</code> para empilhar os elementos verticalmente</li>
+            <li>• <code>height: 25vh</code> em cada caixa para dividir igualmente a altura da tela</li>
+            <li>• <code>box-sizing: border-box</code> para cálculo preciso das dimensões</li>
+            <li>• Centralização do texto usando <code>align-items</code> e <code>justify-content</code></li>
+            <li>• As cores são definidas individualmente usando <code>nth-child()</code> para manter a fidelidade com o exercício original</li>
+            <li>• A altura total do container é garantida pelo <code>min-height: 100vh</code> na seção principal.</li>
+        </ul>
+    </div>
 
-    <!-- Cenário b) Elementos inline -->
-    <section class="cenario">
-        <h2>b) Elementos Inline</h2>
-        <div class="exemplo">
-            <span>Span 1</span>
-            <span>Span 2</span>
-            <a href="#">Link</a>
-        </div>
-        <div class="explicacao">
-            <strong>Por que exibe assim?</strong>
-            <ul>
-                <li>Spans e links são elementos inline.</li>
-                <li>Ocupam apenas o espaço do conteúdo.</li>
-                <li>Ficam na mesma linha, se couberem.</li>
-            </ul>
-        </div>
+    <!-- Exercício B -->
+    <section class="exercicio" id="exercicioB">
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+        <div class="caixa">4</div>
     </section>
+    <div class="explicacao-item">
+        <h3>Explicação do Exercício B</h3>
+        <ul>
+            <li>• O layout horizontal é construído com:</li>
+            <li>• <code>display: flex</code> no container para alinhamento horizontal</li>
+            <li>• <code>width: 25%</code> em cada caixa para divisão igual da largura</li>
+            <li>• <code>height: 225px</code> fixo mantendo a proporção original</li>
+            <li>• <code>line-height: 225px</code> para centralização vertical do texto</li>
+            <li>• Gerenciamento de espaçamento com <code>box-sizing</code></li>
+            <li>• A combinação de <code>flex: 1</code> e <code>width: 25%</code> garante que as caixas mantenham proporções idênticas mesmo em diferentes resoluções de tela</li>
+            <li>• O container principal tem altura fixa para manter a fidelidade com o exercício proposto.</li>
+        </ul>
+    </div>
 
-    <!-- Cenário c) Layout Flexbox -->
-    <section class="cenario">
-        <h2>c) Layout Flexbox</h2>
-        <div class="exemplo-flex">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-        </div>
-        <div class="explicacao">
-            <strong>Por que exibe assim?</strong>
-            <ul>
-                <li>O container usa <code>display: flex</code>.</li>
-                <li>Itens se alinham horizontalmente por padrão.</li>
-                <li>O espaçamento é controlado por <code>gap</code>.</li>
-            </ul>
-        </div>
+    <!-- Exercício C -->
+    <section class="exercicio" id="exercicioC">
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+        <div class="caixa">4</div>
+        <div class="caixa">5</div>
     </section>
+    <div class="explicacao-item">
+        <h3>Explicação do Exercício C</h3>
+        <ul>
+            <li>• Este exercício emprega posicionamento avançado:</li>
+            <li>• <code>position: absolute</code> para elementos nos cantos</li>
+            <li>• <code>position: fixed</code> na caixa central para posicionamento relativo à viewport</li>
+            <li>• <code>transform: translate()</code> para centralização precisa</li>
+            <li>• Gerenciamento de sobreposição com <code>z-index</code></li>
+            <li>• Coordenadas <code>top/left/right/bottom</code> para alinhamento</li>
+            <li>• A caixa roxa usa <code>position: fixed</code> com transformação de tradução para centralização perfeita, mantendo-se visível durante o scroll</li>
+            <li>• As demais caixas usam posicionamento absoluto relativo ao container pai com <code>position: relative</code>.</li>
+        </ul>
+
+        <a href="https://fernandoramthun.github.io/lista_css_1/">Voltar para a lista de exercícios</a>
 
 
-    <a href="https://fernandoramthun.github.io/lista_css_1/">Voltar para a lista de exercícios</a>
+    </div>
+
+
 </body>
 </html>

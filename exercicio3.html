@@ -2,24 +2,75 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incluindo CSS Externo</title>
     <link rel="stylesheet" href="style.css"> <!-- CSS externo aqui! -->
 </head>
 <body>
 
-    <h1>Incluir CSS em HTML é como escolher como vestir seu site: você pode colocar a roupa diretamente na peça (inline), preparar um conjunto no cabeçalho (interno), ou usar um guarda-roupa externo (arquivo .css). A melhor prática é o método externo, pois mantém o código organizado e facilita manutenções.
+    <div class="conteudo">
+        <br>
+        <hr>
+        <h1>Incluir CSS em HTML: Como Vestir Seu Site</h1>
+        <hr>
+        <br>
+        <p>Incluir CSS em seu site é como escolher a roupa que o seu site vai usar. Você pode adicionar o estilo de três formas principais: diretamente nas tags (inline), dentro do próprio código HTML (interno), ou ainda usar um arquivo separado, o CSS externo, que é o mais recomendado para manter seu site organizado e fácil de atualizar.</p>
+        
+        <h2>Três Formas de Usar CSS</h2>
+        <p><span style="font-weight: bold;">Inline</span>: O estilo é aplicado diretamente na tag, usando o atributo <code>style</code>. Por exemplo, <code>&lt;p style="color:red"&gt;</code>.<br>
+           <span style="font-weight: bold;">Interno</span>: O estilo é inserido dentro da tag <code>&lt;style&gt;</code> na seção <code>&lt;head&gt;</code> do documento HTML.<br>
+           <span style="font-weight: bold;">Externo</span>: O CSS é colocado em um arquivo separado com extensão <code>.css</code>, e o arquivo é vinculado ao HTML com a tag <code>&lt;link&gt;</code>.
+        </p>
 
-        Exemplo Prático:
-        No HTML abaixo, o CSS é vinculado via < link >, e todos os estilos estão no arquivo .css, sem alterações no HTML. As palavras em < span > já existentes ganham destaque apenas via CSS!</h1>
-    <h2>Três Formas de Usar CSS:</h2>
-    
-    <p>
-        <span>Inline</span>: Estilo direto na tag (ex: &lt;p style="color:red"&gt;).<br>
-        <span>Interno</span>: Usando &lt;style&gt; dentro do HTML.<br>
-        <span>Externo</span>: Linkando um arquivo .css (como este exemplo!).
-    </p>
+        <h3>CSS Externo</h3>
+        <p>O CSS externo é o método mais eficiente e escalável, ideal para sites grandes ou com várias páginas. Ele permite que você defina todos os estilos em um único arquivo e os reutilize em várias páginas HTML. A inclusão do CSS é feita com a tag <code>&lt;link&gt;</code> dentro do <code>&lt;head&gt;</code>.</p>
+        
+        <div class="fonte_imagem">
+            <img src="imagens/css_externo.JPG" alt="Exemplo de CSS Externo" style="border: solid 1px black;">
+            <div>Figura 1 - Exemplo de CSS Externo</div>
+        </div>
 
+        <h3>CSS Interno</h3>
+        <p>Quando você precisa de um estilo único para uma página específica, pode usar o CSS interno. Para isso, o código CSS é colocado dentro da tag <code>&lt;style&gt;</code> na seção <code>&lt;head&gt;</code>.</p>
+        
+        <div class="fonte_imagem">
+            <img src="imagens/css_interno.JPG" alt="Exemplo de CSS Interno" style="border: solid 1px black;">
+            <div>Figura 2 - Exemplo de CSS Interno</div>
+        </div>
 
-    <a href="https://fernandoramthun.github.io/lista_css_1/">Voltar para a lista de exercícios</a>
+        <h3>CSS Embutido</h3>
+        <p>O CSS embutido é aplicado diretamente a um elemento específico, através do atributo <code>style</code>. Isso pode ser útil para estilizar um único elemento sem alterar o estilo geral da página.</p>
+        
+        <div class="fonte_imagem">
+            <img src="imagens/css_embutido.JPG" alt="Exemplo de CSS Embutido" style="border: solid 1px black;">
+            <div>Figura 3 - Exemplo de CSS Embutido</div>
+        </div>
+
+        <h3>Ordem de Procedência</h3>
+        <p>Quando você utiliza mais de um tipo de CSS em uma página, a ordem de inclusão é importante. O CSS embutido tem a maior prioridade, seguido pelo CSS interno e, por último, o CSS externo. Ou seja, se houver conflito, o último estilo aplicado prevalecerá.</p>
+
+        <div class="fonte_imagem">
+            <img src="imagens/procedencia.JPG" alt="Ordem de Procedência" style="border: solid 1px black;">
+            <div>Figura 4 - Ordem de Procedência</div>
+        </div>
+
+        <div class="Referencias">
+            <h3>Referências Bibliográficas</h3>
+            <ul>
+                <li>MDN Web Docs - CSS: Definição e Fundamentos. 2025. Disponível em: <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">https://developer.mozilla.org/pt-BR/docs/Web/CSS</a>. Acesso em: 23 mar. 2025.</li>
+            </ul>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div class="fonte_imagem">
+            Para voltar à <b>lista de atividades</b>, clique <a href="https://fernandoramthun.github.io/lista_css_1/"><b>aqui</b></a>.
+        </div>
+        <br>
+        <hr>
+        <br>
+    </div>
+
 </body>
 </html>
