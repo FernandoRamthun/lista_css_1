@@ -21,7 +21,7 @@
         <section class="regra">
             <h2>Regra 1: Seletor de Elemento</h2>
             <p class="codigo"><code>li { color: red; }</code></p>
-            <p class="peso">🔹 Peso: Baixo (seletor genérico de elemento).</p>
+            <p class="peso">Peso: Baixo (seletor genérico de elemento).</p>
             <p class="aplica">✔ Aplica-se a todos os itens da lista.</p>
             <p class="exemplo">Exemplo: Todos os itens da lista ficam vermelhos, a menos que outra regra com mais peso os sobrescreva.</p>
         </section>
@@ -30,7 +30,7 @@
         <section class="regra">
             <h2>Regra 2: Seletor de Classe</h2>
             <p class="codigo"><code>.churras { color: green; }</code></p>
-            <p class="peso">🔹 Peso: Médio (classe tem mais prioridade que elemento).</p>
+            <p class="peso">Peso: Médio (classe tem mais prioridade que elemento).</p>
             <p class="aplica">✔ Afeta todos os itens da lista que possuem a classe <code>churras</code>.</p>
             <p class="exemplo">Exemplo: Os itens "Carne" e "Linguiça" deveriam ficar verdes, mas outra regra pode interferir.</p>
         </section>
@@ -39,7 +39,7 @@
         <section class="regra">
             <h2>Regra 3: Outra Classe com Prioridade</h2>
             <p class="codigo"><code>.fruta { color: gray; }</code></p>
-            <p class="peso">🔹 Peso: Médio (mesma prioridade da Regra 2).</p>
+            <p class="peso">Peso: Médio (mesma prioridade da Regra 2).</p>
             <p class="aplica">✔ Afeta todos os itens que possuem a classe <code>fruta</code>.</p>
             <p class="exemplo">Exemplo: "Melão", "Pera", "Uva" e "Maçã" ficam cinza.</p>
         </section>
@@ -48,7 +48,7 @@
         <section class="regra">
             <h2>Regra 4: Combinador Adjancente + Classe</h2>
             <p class="codigo"><code>li + li.churras { color: black; }</code></p>
-            <p class="peso">🔹 Peso: Alto (elemento + classe + combinador).</p>
+            <p class="peso">Peso: Alto (elemento + classe + combinador).</p>
             <p class="aplica">✔ Aplica-se apenas aos itens <code>.churras</code> que vêm logo após outro <code>li</code>.</p>
             <p class="exemplo">Exemplo: "Carne" e "Linguiça" ficariam pretos, pois são precedidos por outro <code>li</code>.</p>
         </section>
@@ -57,7 +57,7 @@
         <section class="regra">
             <h2>Regra 5: Atributo Específico</h2>
             <p class="codigo"><code>.churras[draggable="true"] { color: magenta; }</code></p>
-            <p class="peso">🔹 Peso: Alto (classe + seletor de atributo).</p>
+            <p class="peso">Peso: Alto (classe + seletor de atributo).</p>
             <p class="aplica">✔ Afeta elementos da classe <code>churras</code> que possuem o atributo <code>draggable="true"</code>.</p>
             <p class="exemplo">Exemplo: Apenas "Pão de alho" fica magenta, pois é o único que tem <code>draggable="true"</code>.</p>
         </section>
@@ -66,7 +66,7 @@
         <section class="regra">
             <h2>Regra 6: IDs Específicos</h2>
             <p class="codigo"><code>#lip1, #lip2, #lip3 { color: blue; }</code></p>
-            <p class="peso">🔹 Peso: Muito Alto (IDs têm prioridade sobre classes e elementos).</p>
+            <p class="peso">Peso: Muito Alto (IDs têm prioridade sobre classes e elementos).</p>
             <p class="aplica">✔ Aplica-se aos itens com IDs <code>lip1</code>, <code>lip2</code> e <code>lip3</code>.</p>
             <p class="exemplo">Exemplo: "Pera" e "Uva" ficarão azuis, independentemente de outras regras aplicadas.</p>
         </section>
@@ -75,7 +75,7 @@
         <section class="regra">
             <h2>Regra 7: ID + Classe (Máxima Especificidade)</h2>
             <p class="codigo"><code>#lip3.fruta { color: orange; }</code></p>
-            <p class="peso">🔹 Peso: Extremamente Alto (ID + Classe combinados).</p>
+            <p class="peso">Peso: Extremamente Alto (ID + Classe combinados).</p>
             <p class="aplica">✔ Aplica-se apenas ao item que possui ID <code>lip3</code> e classe <code>fruta</code>.</p>
             <p class="exemplo">Exemplo: "Uva" ficará laranja, pois essa regra tem mais peso do que a Regra 6.</p>
         </section>
@@ -84,8 +84,8 @@
         <section class="regra">
             <h2>Regra 8: Elemento + Classe + ID (Inválido)</h2>
             <p class="codigo"><code>ol > li.churras#lip5 { color: purple; }</code></p>
-            <p class="peso">🔹 Peso: Máximo, mas sem efeito.</p>
-            <p class="aplica">❌ Essa regra não afeta nenhum elemento, pois não existe um item com o ID <code>lip5</code>.</p>
+            <p class="peso">Peso: Máximo, mas sem efeito.</p>
+            <p class="aplica">Essa regra não afeta nenhum elemento, pois não existe um item com o ID <code>lip5</code>.</p>
             <p class="exemplo">Exemplo: Nenhuma alteração visual ocorre.</p>
         </section>
     </div>
