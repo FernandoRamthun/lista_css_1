@@ -1,66 +1,4 @@
-/* Estilos para o título h1 */
-h1 {
-    font-family: 'Arial', sans-serif;
-    color: #2c3e50;
-    text-align: center;
-}
-
-/* Estilo geral para parágrafos */
-p {
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
-/* Estilizando parágrafos específicos */
-p:nth-of-type(1) {
-    color: #000a04; /* Cor preto */
-}
-
-p:nth-of-type(1) span {
-    background-color: #f1c40f; /* Fundo amarelo */
-    font-style: italic;
-}
-
-p:nth-of-type(2) {
-    color: #e74c3c; /* Cor vermelha */
-}
-
-p:nth-of-type(2) span {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-p:nth-of-type(3) {
-    color: #3498db; /* Cor azul */
-}
-
-p:nth-of-type(3) span {
-    background-color: #9b59b6; /* Fundo roxo */
-    color: white;
-    padding: 3px;
-}
-
-/* Estilizando todas as palavras em <span> dentro de p */
-p span:first-of-type { /* "Inline" */
-    color: #e74c3c;
-    font-weight: bold;
-}
-
-p span:nth-of-type(2) { /* "Interno" */
-    color: #27ae60;
-    text-decoration: underline;
-}
-
-p span:last-of-type { /* "Externo" */
-    color: #2980b9;
-    background-color: #ecf0f1;
-    padding: 3px;
-}
-
-/* Estilos gerais para o corpo */
+/* Mantenha o corpo primeiro */
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -69,107 +7,67 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Estilos para o exemplo prático */
-.exemplo-pratico {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
+/* Simplifique os títulos */
+.titulo-principal {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos básicos para parágrafos */
+.paragrafo {
+    line-height: 1.6;
+    padding: 15px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
-.exemplo-pratico ol {
-    list-style-type: none;
-    padding-left: 0;
+/* Destaques com classes semânticas */
+.destaque-amarelo {
+    background-color: #f1c40f;
+    font-style: italic;
+    padding: 2px 5px;
 }
 
-/* Estilos para os exemplos */
-.exemplo div, .exemplo p, .exemplo span, .exemplo a {
+.destaque-vermelho {
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Exemplos práticos com container */
+.container-exemplo {
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Classes para tipos de elementos */
+.elemento-bloco {
+    background-color: #e74c3c;
+    color: white;
     padding: 10px;
     margin: 5px;
 }
 
-/* Cenário a) Bloco */
-.exemplo div, .exemplo p {
-    background-color: #e74c3c;
-    color: white;
-}
-
-/* Cenário b) Inline */
-.exemplo span, .exemplo a {
+.elemento-inline {
     background-color: #3498db;
     color: white;
-    display: inline-block; /* Para permitir padding */
+    padding: 5px;
 }
 
-/* Cenário c) Flexbox */
-.exemplo-flex {
+/* Flexbox simplificado */
+.flex-container {
     display: flex;
     gap: 10px;
-    background-color: #2ecc71;
     padding: 10px;
+    background-color: #2ecc71;
 }
 
-.exemplo-flex div {
+.flex-item {
     background-color: white;
     padding: 15px;
+    flex: 1;
 }
-
-/* Explicações */
-.explicacao {
-    background-color: #ecf0f1;
-    padding: 15px;
-    margin-top: 15px;
-    border-left: 4px solid #3498db;
-    border-radius: 4px;
-}
-
-.explicacao strong {
-    color: #3498db;
-}
-
-.explicacao ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.explicacao li {
-    margin: 8px 0;
-}
-
-/* Estilos para análise de regras CSS */
-.analise-css {
-    font-family: 'Arial', sans-serif;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-.regra {
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 4px solid #3498db;
-    background-color: white;
-}
-
-.regra h2 {
-    color: #2c3e50;
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.peso::before { content: "Peso: "; font-weight: bold; }
-.aplica::before { content: "Aplica em: "; font-weight: bold; }
-.exemplo::before { content: "Exemplo: "; font-weight: bold; }
-
-/* Regras de exemplo */
-li { color: red; }
-.churras { color: green; }
-.fruta { color: gray; }
-li + li.churras { color: black; }
-.churras[draggable="true"] { color: magenta; }
-#lip1, #lip2, #lip3 { color: blue; }
-#lip3.fruta { color: orange; }
-ol > li.churras#lip5 { color: purple; } /* Não aplicada */
